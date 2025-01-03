@@ -6,15 +6,15 @@ Start([Start]) --> A[Generate a random number]
     C -->|No| D[Show error message: Invalid input!]
     D --> B
     C -->|Yes| E{Is the guess within range?}
-    E -->|No| F[Show error message: 'Guess out of range!']
+    E -->|No| F[Show error message: Guess not in range!]
     F --> B
     E -->|Yes| G{Is the guess correct?}
-    G -->|Yes| H[Show message: 'Correct! You guessed it!']
+    G -->|Yes| H[Show message: Correct!]
     H --> End([End])
     G -->|No| I{Is the guess too high?}
-    I -->|Yes| J[Show message: 'Too high! Try again.']
+    I -->|Yes| J[Show message: Too high! Try again.]
     J --> B
-    I -->|No| K[Show message: 'Too low! Try again.']
+    I -->|No| K[Show message: Too low! Try again.]
     K --> B
 End([End])
 ```
