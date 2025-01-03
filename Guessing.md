@@ -3,7 +3,7 @@ flowchart TD
 Start([Start]) --> A[Generate a random number]
     A --> B[Prompt user for a guess]
     B --> C{Is the input numeric?}
-    C -->|No| D[Show error message: 'Invalid input!']
+    C -->|No| D[Show error message: Invalid input!]
     D --> B
     C -->|Yes| E{Is the guess within range?}
     E -->|No| F[Show error message: 'Guess out of range!']
